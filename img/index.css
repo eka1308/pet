@@ -1,0 +1,103 @@
+.modal-wrapper {
+  position: fixed;
+  
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+ 
+  background: rgb(0, 0, 0,0.4);
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal{
+  background-color: white ;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  
+}
+
+.hidden{
+  display: none;
+}
+
+.card-top {
+  height: 200px
+}
+
+
+.card-body {
+
+  background-color: white;
+}
+
+.error-msg{
+  color: red;
+}
+
+
+.modalClose {
+ position: absolute;
+ background-color: white;
+ height: 25px;
+ border-radius: 15px;
+ top: 1%;
+ right: 1%;
+}
+
+.modalCloseForm {
+  position: absolute;
+  background-color: white;
+  height: 25px;
+  border-radius: 15px;
+  top: 1%;
+  right: 1%;
+}
+
+
+body {
+  background-image: url('img/bg-1.png') ;
+  
+  
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+
+  .true {
+    width: 48px;
+    height: 48px;
+    background-image: url('img/true.png') ;
+    cursor: pointer;
+    
+  }
+  
+  .false {
+    
+    width: 48px;
+    height: 48px;
+    background-image: url('img/false.png') ;
+    cursor: pointer;
+  }
+
+
+  .btn {
+    margin: 2px;
+    border-radius: 10px;
+  }
+  
+
+  .btn-wrapper {
+    height: 100px;
+  }
+
+
+  
