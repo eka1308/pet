@@ -7,6 +7,7 @@ const $spinner = document.querySelector('[data-spinner]')
 const $formErrorMsg = document.querySelector('[data-errmsg]')
 const $modalClose = document.querySelector('.modalClose');
 const $modalCloseForm = document.querySelector('.modalCloseForm');
+const $modalCloseFormEdit = document.querySelector('.modalCloseFormEdit');
 const $modalEdit = document.querySelector('[data-modal-edit]')
 const $inputEdit = document.querySelectorAll(".edit");
 const $btnWrapper = document.querySelector('[btn-wrapper]');
@@ -15,7 +16,7 @@ const $btnWrapper = document.querySelector('[btn-wrapper]');
 
 const HIDDEN_CLASS = 'hidden'
 
-const generateCatCard = (cat) => {
+const generateCatCard = (cat) => {     // зверь в карте
 
   if (cat.image =="") {cat.image = "img/pet.jpg"};
   if (cat.name =="") {cat.name = "У красавца нет имени"};
@@ -167,7 +168,7 @@ $wrapper.addEventListener('click', async (event) => {
       editCatFunc();
       break;
 
-    case 'love':
+    case 'love':                             // назначить кота любимчиком (синее либо коасное сердце)
        
       if (event.target.className === 'false') {
           event.target.className = 'true'
@@ -321,12 +322,16 @@ document.forms.add_cats_form.addEventListener('submit', async (event) => {   //�
 })
 
 
-$modalCloseForm.addEventListener('click', () => {                           
+$modalCloseForm.addEventListener('click', () => {           //кнопка-крестик закрытия модалки справа вверху                 
   $modalAdd.classList.add(HIDDEN_CLASS)
 })
 
-$modalClose.addEventListener('click', () => {
+$modalClose.addEventListener('click', () => {              //кнопка закрытия модалки справа вверху  
   $modalEx.classList.add(HIDDEN_CLASS);
+})
+
+$modalCloseFormEdit.addEventListener('click', () => {       //кнопка закрытия модалки справа вверху, печалько с повторяющимся кодом... потом это переделаю  
+  $modalEdit.classList.add(HIDDEN_CLASS);
 })
 
 
